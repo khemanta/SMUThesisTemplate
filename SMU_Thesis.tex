@@ -1,0 +1,225 @@
+%% -----------------------------------------------------------------------------------------------%%
+%% 
+%% This Thesis/Project Report template was designed by Kumar Hemant under Creative Common License.
+%% You may reach out to Kumar Hemant, at <kumar.hemant.iitg@gmail.com>
+%%
+%% CREDITS:
+%% This template is hacked version of original "Article" package available under the TeX and LaTeX
+%% programming enviornment for document typesettings developed by Prof. Emeritus, Donald E. Knuth of 
+%% Stanford University and author of "The Art of Programming".
+%% The LaTeX typesettings are borrowed largely from book, "The \LaTeX Companion" by Leslie Lamport. 
+%%
+%% The details of the requisite packages and information is available from WWW.CTAN.ORG
+%% Disclaimer by Author: This template was created in good faith and tries to comply with the guidelines
+%% Singapore Management University, hereafter, the University, though the same is not guaranteed
+%% and author is not held responsible for any misuse. The end user are allowed to make the changes
+%% in source code as long as cite the original author and give credits.
+%%
+%% DISCLAIMER:
+%% THIS IS UNOFFICIAL TEMPLATE OF PROJECT PHD THESIS TEMPLATE RELEASED UNDER CREATIVE COMMON LICENSE. 
+%%     THE END USER IS RESPONSIBLE FOR FOLLOWING THE GUIDELINES OF UNIVERSITY DIGITAL IDENTITY.
+%% ------------------------------------------------------------------------------------------------%%
+
+\documentclass[titlepage,a4paper,12pt,thmsb]{report}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage[english]{babel}
+\usepackage{float,epsfig, floatflt,here}
+\usepackage{amsmath}
+\usepackage{a4}
+\usepackage{fancyhdr}
+\usepackage{makeidx}
+\usepackage{hyperref}
+\usepackage{moreverb}
+%\usepackage{loremipsum}
+\usepackage{tabularx}
+\usepackage{tabulary}
+
+\textwidth 16cm \textheight 22.5cm \selectlanguage{english}
+\topmargin 0cm \headheight 0.5 cm \oddsidemargin 0cm
+\evensidemargin 0cm
+\renewcommand{\baselinestretch} {1.2} \setlength{\parindent}{0.0cm}
+\setlength{\parskip} {0.5 cm}
+%\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thechapter}{\arabic{chapter}}
+\setcounter {secnumdepth}{5} \setcounter{tocdepth}{5}
+\let\oldTitle\title
+\renewcommand{\title}[1]{\newcommand{\myTitle}{#1}\oldTitle{#1}}
+\newcommand{\leftscripts}[3]{{\vphantom{#3}}^{#1}_{#2}{#3}}
+
+%%% Fancy Header %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fancy Header Style Options
+\pagestyle{fancyplain}                  % Sets fancy header and footer
+%\fancyfoot{}                           % Delete current footer settings
+\renewcommand{\chaptermark}[1]{         % Lower Case Chapter marker style
+  \markboth{\chaptername\ \thechapter.\ #1}{}} %
+\renewcommand{\sectionmark}[1]{         % Lower case Section marker style
+  \markright{\thesection.\ #1}}         %
+\fancyhead[LE,RO]{\thepage}             % Page number (boldface) in left on even
+                                        % pages and right on odd pages
+%\fancyhead[RE]{\bfseries\leftmark}     % Chapter in the right on even pages
+\fancyhead[RE]{\leftmark}               % Chapter in the right on even pages
+%\fancyhead[LO]{\bfseries\rightmark}    % Section in the left on odd pages
+\fancyhead[LO]{\rightmark}              % Section in the left on odd pages
+
+\renewcommand{\headrulewidth}{0.1pt}    % Width of head rule
+\renewcommand\footrulewidth{0.1pt}
+%\fancyfoot[CE,CO]{\myTitle}{}
+\fancyfoot[CE,CO]{Capstone Project Report}{}
+\makeindex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\let\oldAuthor\author
+%\renewcommand{\author}[1]{\newcommand{\myAuthor}{#1}\oldAuthor{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\pagenumbering{roman}
+\begin{titlepage}
+\thispagestyle{empty}
+%\vspace*{0.7cm}
+\begin{center}
+%{\centering
+%\large
+{\LARGE \bf{ A Capstone Project Report on Analytics Work Carried Out at IBM}} \\
+\vspace{2.0cm}
+%\it{A project report submitted in partial fulfillment \\ for the requirements for the degree of \\ Master of IT in Business} \\
+\sc{a project report submitted in partial fulfillment\\ for the requirements of the degree of} \\
+\vskip 0.5cm
+\bf{Master of IT in Business Analytics} \\
+\vspace{0.5cm}
+%\sc
+\sc{by} \\
+\vspace{0.5cm}
+\rm
+{\large \bf {Candidate Name}}\\
+%{\large \bf {01010410}}
+
+\vspace{1cm}
+
+{\sc{under the guidance of}} \\
+\vspace{.5cm}
+
+\hspace{.05cm} {\bf {Your Academic Advisor}}\\
+\hspace{.05cm} {\sc and}\\
+\hspace{.05cm} {\bf {Your Industry Advisor}}\\
+\vspace{0.5cm}
+\vspace{0.5cm}
+%\universityseal\ \\
+
+\begin{figure}[h]
+%\hspace{6cm}
+%\vspace{5cm}
+{\centering {\includegraphics[width=0.5\linewidth,angle=0]{logo/smu_sis.jpg}}\par}
+\end{figure}
+
+\vskip 0.5cm
+
+%\large{\bf Department of Mathematics \& Computing} \\
+\large{\bf SCHOOL OF INFORMATION SYSTEM} \\
+\vskip 0.5cm
+%\Large{\bf Indian Institute of Technology Guwahati}\\
+\Large{\bf SINGAPORE MANAGEMENT UNIVERSITY}\\
+\vskip 0.5cm
+{\centering \sc{Singapore, May 2014}}
+%} %%% this is end of centering environment
+\end{center}
+\pagebreak
+\end{titlepage}
+
+
+\chapter*{CERTIFICATE}
+\addcontentsline{toc}{chapter}{\numberline{}CERTIFICATE}
+It is certified that the work contained in this report entitled {\bf Title of the project} has been carried out by {\bf Name of Candidate} under our supervision as Capstone Project from December 2013 to June 2014 and that in our opinion is fully adequate, in scope and quality, as a dissertation for the degree of {\sc MITB}.\\
+\vspace*{0.5cm}\\
+
+\begin{tabbing}
+% \hspace{10cm}                                         \>  \hspace{10cm}            \= \kill
+2222222222222222222222222222222222222222222             \= 33333333333333333333333333333333333333333 \= \kill
+{\sc Academic Supervisor}                                \> {\sc Industry Supervisor} \\
+{\bf $<$ Name of supervisor $>$}                         \> {\bf $<$ Name of supervisor $>$} \\
+{\bf $<$ Designation/Address $>$}                    \> {\bf $<$ Designation/Address $>$} \\
+%\includegraphics[width=.4\linewidth]{NameCard}     \> \includegraphics[width=.4\linewidth]{NameCard}
+\end{tabbing}
+
+
+\chapter*{Executive Summary}
+%\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+\addcontentsline{toc}{chapter}{\numberline{}Executive Summary}
+
+%\chapter*{Preface}
+%\addcontentsline{toc}{chapter}{\numberline{}Preface}
+%{\bf ``Problems worthy of attack prove their worth by hitting back"}
+
+
+%%-------------------------- Table of contents ---------------------------------%%
+%\newpage
+%%
+%\centerline{{\bf {\large CONTENTS}}}
+%%
+%\tableofcontents{}
+
+\newpage
+\addcontentsline{toc}{chapter}{\numberline{}Table of Contents}
+%\tableofcontents
+%\makeindex
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}
+
+\chapter{Introduction}
+
+\chapter{Problem Statement}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a nisi diam. Morbi consequat facilisis mi, sit amet laoreet velit aliquet quis. Sed a nisi vel augue ultricies blandit. Phasellus et congue dolor, at cursus dui. Integer quis faucibus metus. Vestibulum lobortis ligula in lectus pretium, in placerat lacus iaculis. Mauris nibh erat, condimentum at tortor at, sagittis viverra tortor. Vivamus posuere fermentum eros, rhoncus sagittis nisi imperdiet ac.
+
+Pellentesque hendrerit neque quis quam fringilla, vitae vulputate quam bibendum. Fusce in hendrerit mauris. Mauris pretium libero eget convallis mattis. Vivamus nec nisi imperdiet, lacinia diam id, facilisis nulla. Vivamus eleifend augue ut libero tincidunt commodo. Vivamus sodales in lacus vitae dictum. Nam et semper felis. Integer scelerisque accumsan condimentum. Aliquam laoreet erat vitae ornare consequat. Donec enim lacus, rutrum ut dui a, pretium mattis dui. Vivamus vulputate arcu nec congue convallis. Suspendisse faucibus turpis ac neque gravida, vel aliquet mauris tristique. In auctor fringilla nunc, sit amet tristique diam semper ac. Cras egestas nisi eu turpis facilisis, ac scelerisque elit lacinia. Sed eget adipiscing enim. Ut pulvinar ultrices purus ac eleifend.
+
+Proin nunc erat, vestibulum quis tincidunt sit amet, cursus et libero. Aliquam erat volutpat. Sed vel malesuada velit. Vivamus risus arcu, facilisis non mauris sed, interdum varius tellus. Vivamus aliquam vel sapien quis ultricies. Mauris venenatis risus enim, in dapibus quam volutpat in. Vivamus iaculis sapien sit amet massa vehicula, tempus facilisis nulla adipiscing. Mauris ullamcorper pharetra libero, quis sodales dolor blandit et. Donec convallis risus id euismod pharetra. Suspendisse placerat laoreet imperdiet. Praesent malesuada fringilla urna, non sollicitudin erat. Nullam arcu neque, lobortis nec facilisis at, scelerisque ac erat. Nunc quis tincidunt lorem, vitae laoreet enim.
+
+\chapter{Research}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a nisi diam. Morbi consequat facilisis mi, sit amet laoreet velit aliquet quis. Sed a nisi vel augue ultricies blandit. Phasellus et congue dolor, at cursus dui. Integer quis faucibus metus. Vestibulum lobortis ligula in lectus pretium, in placerat lacus iaculis. Mauris nibh erat, condimentum at tortor at, sagittis viverra tortor. Vivamus posuere fermentum eros, rhoncus sagittis nisi imperdiet ac.
+
+Pellentesque hendrerit neque quis quam fringilla, vitae vulputate quam bibendum. Fusce in hendrerit mauris. Mauris pretium libero eget convallis mattis. Vivamus nec nisi imperdiet, lacinia diam id, facilisis nulla. Vivamus eleifend augue ut libero tincidunt commodo. Vivamus sodales in lacus vitae dictum. Nam et semper felis. Integer scelerisque accumsan condimentum. Aliquam laoreet erat vitae ornare consequat. Donec enim lacus, rutrum ut dui a, pretium mattis dui. Vivamus vulputate arcu nec congue convallis. Suspendisse faucibus turpis ac neque gravida, vel aliquet mauris tristique. In auctor fringilla nunc, sit amet tristique diam semper ac. Cras egestas nisi eu turpis facilisis, ac scelerisque elit lacinia. Sed eget adipiscing enim. Ut pulvinar ultrices purus ac eleifend.
+
+Proin nunc erat, vestibulum quis tincidunt sit amet, cursus et libero. Aliquam erat volutpat. Sed vel malesuada velit. Vivamus risus arcu, facilisis non mauris sed, interdum varius tellus. Vivamus aliquam vel sapien quis ultricies. Mauris venenatis risus enim, in dapibus quam volutpat in. Vivamus iaculis sapien sit amet massa vehicula, tempus facilisis nulla adipiscing. Mauris ullamcorper pharetra libero, quis sodales dolor blandit et. Donec convallis risus id euismod pharetra. Suspendisse placerat laoreet imperdiet. Praesent malesuada fringilla urna, non sollicitudin erat. Nullam arcu neque, lobortis nec facilisis at, scelerisque ac erat. Nunc quis tincidunt lorem, vitae laoreet enim.
+
+
+\chapter{Models}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a nisi diam. Morbi consequat facilisis mi, sit amet laoreet velit aliquet quis. Sed a nisi vel augue ultricies blandit. Phasellus et congue dolor, at cursus dui. Integer quis faucibus metus. Vestibulum lobortis ligula in lectus pretium, in placerat lacus iaculis. Mauris nibh erat, condimentum at tortor at, sagittis viverra tortor. Vivamus posuere fermentum eros, rhoncus sagittis nisi imperdiet ac.
+
+Pellentesque hendrerit neque quis quam fringilla, vitae vulputate quam bibendum. Fusce in hendrerit mauris. Mauris pretium libero eget convallis mattis. Vivamus nec nisi imperdiet, lacinia diam id, facilisis nulla. Vivamus eleifend augue ut libero tincidunt commodo. Vivamus sodales in lacus vitae dictum. Nam et semper felis. Integer scelerisque accumsan condimentum. Aliquam laoreet erat vitae ornare consequat. Donec enim lacus, rutrum ut dui a, pretium mattis dui. Vivamus vulputate arcu nec congue convallis. Suspendisse faucibus turpis ac neque gravida, vel aliquet mauris tristique. In auctor fringilla nunc, sit amet tristique diam semper ac. Cras egestas nisi eu turpis facilisis, ac scelerisque elit lacinia. Sed eget adipiscing enim. Ut pulvinar ultrices purus ac eleifend.
+
+Proin nunc erat, vestibulum quis tincidunt sit amet, cursus et libero. Aliquam erat volutpat. Sed vel malesuada velit. Vivamus risus arcu, facilisis non mauris sed, interdum varius tellus. Vivamus aliquam vel sapien quis ultricies. Mauris venenatis risus enim, in dapibus quam volutpat in. Vivamus iaculis sapien sit amet massa vehicula, tempus facilisis nulla adipiscing. Mauris ullamcorper pharetra libero, quis sodales dolor blandit et. Donec convallis risus id euismod pharetra. Suspendisse placerat laoreet imperdiet. Praesent malesuada fringilla urna, non sollicitudin erat. Nullam arcu neque, lobortis nec facilisis at, scelerisque ac erat. Nunc quis tincidunt lorem, vitae laoreet enim.
+
+
+\chapter{Results and Discussion}
+From the discussions done in the previous chapters we come to the following conclusions.
+\begin{itemize}
+
+\item{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a nisi diam. Morbi consequat facilisis mi, sit amet laoreet velit aliquet quis. Sed a nisi vel augue ultricies blandit. Phasellus et congue dolor, at cursus dui. Integer quis faucibus metus. Vestibulum lobortis ligula in lectus pretium, in placerat lacus iaculis. Mauris nibh erat, condimentum at tortor at, sagittis viverra tortor. Vivamus posuere fermentum eros, rhoncus sagittis nisi imperdiet ac.}
+
+\item{Pellentesque hendrerit neque quis quam fringilla, vitae vulputate quam bibendum. Fusce in hendrerit mauris. Mauris pretium libero eget convallis mattis. Vivamus nec nisi imperdiet, lacinia diam id, facilisis nulla. Vivamus eleifend augue ut libero tincidunt commodo. Vivamus sodales in lacus vitae dictum. Nam et semper felis. Integer scelerisque accumsan condimentum. Aliquam laoreet erat vitae ornare consequat. Donec enim lacus, rutrum ut dui a, pretium mattis dui. Vivamus vulputate arcu nec congue convallis. Suspendisse faucibus turpis ac neque gravida, vel aliquet mauris tristique. In auctor fringilla nunc, sit amet tristique diam semper ac. Cras egestas nisi eu turpis facilisis, ac scelerisque elit lacinia. Sed eget adipiscing enim. Ut pulvinar ultrices purus ac eleifend.}
+
+\item{Proin nunc erat, vestibulum quis tincidunt sit amet, cursus et libero. Aliquam erat volutpat. Sed vel malesuada velit. Vivamus risus arcu, facilisis non mauris sed, interdum varius tellus. Vivamus aliquam vel sapien quis ultricies. Mauris venenatis risus enim, in dapibus quam volutpat in. Vivamus iaculis sapien sit amet massa vehicula, tempus facilisis nulla adipiscing. Mauris ullamcorper pharetra libero, quis sodales dolor blandit et. Donec convallis risus id euismod pharetra. Suspendisse placerat laoreet imperdiet. Praesent malesuada fringilla urna, non sollicitudin erat. Nullam arcu neque, lobortis nec facilisis at, scelerisque ac erat. Nunc quis tincidunt lorem, vitae laoreet enim.}
+
+\end{itemize}
+
+\section{\bf FUTURE LINES OF WORK IN THIS AREA}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent a nisi diam. Morbi consequat facilisis mi, sit amet laoreet velit aliquet quis. Sed a nisi vel augue ultricies blandit. Phasellus et congue dolor, at cursus dui. Integer quis faucibus metus. Vestibulum lobortis ligula in lectus pretium, in placerat lacus iaculis. Mauris nibh erat, condimentum at tortor at, sagittis viverra tortor. Vivamus posuere fermentum eros, rhoncus sagittis nisi imperdiet ac.
+
+Pellentesque hendrerit neque quis quam fringilla, vitae vulputate quam bibendum. Fusce in hendrerit mauris. Mauris pretium libero eget convallis mattis. Vivamus nec nisi imperdiet, lacinia diam id, facilisis nulla. Vivamus eleifend augue ut libero tincidunt commodo. Vivamus sodales in lacus vitae dictum. Nam et semper felis. Integer scelerisque accumsan condimentum. Aliquam laoreet erat vitae ornare consequat. Donec enim lacus, rutrum ut dui a, pretium mattis dui. Vivamus vulputate arcu nec congue convallis. Suspendisse faucibus turpis ac neque gravida, vel aliquet mauris tristique. In auctor fringilla nunc, sit amet tristique diam semper ac. Cras egestas nisi eu turpis facilisis, ac scelerisque elit lacinia. Sed eget adipiscing enim. Ut pulvinar ultrices purus ac eleifend.
+
+Proin nunc erat, vestibulum quis tincidunt sit amet, cursus et libero. Aliquam erat volutpat. Sed vel malesuada velit. Vivamus risus arcu, facilisis non mauris sed, interdum varius tellus. Vivamus aliquam vel sapien quis ultricies. Mauris venenatis risus enim, in dapibus quam volutpat in. Vivamus iaculis sapien sit amet massa vehicula, tempus facilisis nulla adipiscing. Mauris ullamcorper pharetra libero, quis sodales dolor blandit et. Donec convallis risus id euismod pharetra. Suspendisse placerat laoreet imperdiet. Praesent malesuada fringilla urna, non sollicitudin erat. Nullam arcu neque, lobortis nec facilisis at, scelerisque ac erat. Nunc quis tincidunt lorem, vitae laoreet enim.
+
+
+\chapter{Appendix}
+\section{Concept 1}
+
+\section{Concept 2}
+
+\section{Concept 3}
+\bibliographystyle{plain}
+\bibliography{cimne}
+\end{document}
