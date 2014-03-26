@@ -1,22 +1,30 @@
-%% 
+%% ------------------------------------------------------------------------------------------------%%
+%%
 %% This Thesis/Project Report template was designed by Kumar Hemant under Creative Common License.
 %% You may reach out to Kumar Hemant, at <kumar.hemant.iitg@gmail.com> for any question.
 %%
-%% CREDITS:
+%% CREDITS :
 %% This template is hacked version of original "Article" package available under the TeX and LaTeX
 %% programming environment for document typesetting developed by Prof. Emeritus, Donald E. Knuth of 
 %% Stanford University and author of "The Art of Programming".
-%% The LaTeX typesetting are borrowed largely from book, "The \LaTeX Companion" by Leslie Lamport. 
+%% The LaTeX typesetting are borrowed largely from book, "The \LaTeX Companion" by Leslie Lamport of
+%% Microsoft Research.
 %%
-%% The details of the requisite packages and information is available from WWW.CTAN.ORG
-%% Disclaimer by Author: This template was created in good faith and tries to comply with the guidelines
-%% Singapore Management University, hereafter, the University, though the same is not guaranteed
-%% and author is not held responsible for any misuse. The end user are allowed to make the changes
-%% in source code as long as cite the original author and give credits.
+%% The details of the requisite packages are available from The Comprehensivce TeX Archieve Network.
+%%
+%%                                  www.ctan.org                                                   
+%%
+%% DISCLAIMER FROM AUTHOR : 
+%% This template was created in good faith for students, employee and staff of 
+%% Singapore Management University, hereafter, the University, complying with the digital and media 
+%% guidelines of the University. Though the same is not guaranteed and author is not held responsible 
+%% for any misuse. The end user are allowed to make the changes in source code as long as cite the 
+%% original author and give credits.
 %%
 %% DISCLAIMER:
 %% THIS IS UNOFFICIAL TEMPLATE OF PROJECT PHD THESIS TEMPLATE RELEASED UNDER CREATIVE COMMON LICENSE. 
 %%     THE END USER IS RESPONSIBLE FOR FOLLOWING THE GUIDELINES OF UNIVERSITY DIGITAL IDENTITY.
+%%
 %% ------------------------------------------------------------------------------------------------%%
 
 
@@ -32,4 +40,4 @@ UNIX(Texlive)
 
 $ pdflatex pdflatex  SMU_Thesis.tex
 
-Output file will be created in the directory same directory of *tex file at SMU_Thesis.pdf
+Output file will be created in the same directory of *tex file at SMU_Thesis.pdf
