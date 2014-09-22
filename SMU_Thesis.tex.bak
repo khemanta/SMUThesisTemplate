@@ -79,7 +79,7 @@
 \begin{center}
 %{\centering
 %\large
-{\LARGE \bf{ A Capstone Project Report on Analytics Work Carried Out at hemsoft, Inc.}} \\
+{\LARGE \bf{ A Capstone Project Report on Analytics Work Carried Out at IBM}} \\
 \vspace{2.0cm}
 %\it{A project report submitted in partial fulfillment \\ for the requirements for the degree of \\ Master of IT in Business} \\
 \sc{a project report submitted in partial fulfillment\\ for the requirements of the degree of} \\
@@ -98,9 +98,9 @@
 {\sc{under the guidance of}} \\
 \vspace{.5cm}
 
-\hspace{.05cm} {\bf {Prof. XY Zee}}\\
+\hspace{.05cm} {\bf {Your Academic Advisor}}\\
 \hspace{.05cm} {\sc and}\\
-\hspace{.05cm} {\bf {Kumar Hemant}}\\
+\hspace{.05cm} {\bf {Your Industry Advisor}}\\
 \vspace{0.5cm}
 \vspace{0.5cm}
 %\universityseal\ \\
@@ -119,10 +119,9 @@
 %\Large{\bf Indian Institute of Technology Guwahati}\\
 \Large{\bf SINGAPORE MANAGEMENT UNIVERSITY}\\
 \vskip 0.5cm
-{\centering \sc{Singapore, April 2014}}
+{\centering \sc{Singapore, May 2014}}
 %} %%% this is end of centering environment
 \end{center}
-
 \pagebreak
 \end{titlepage}
 
@@ -140,16 +139,6 @@ It is certified that the work contained in this report entitled {\bf Title of th
 {\bf $<$ Designation/Address $>$}                    \> {\bf $<$ Designation/Address $>$} \\
 %\includegraphics[width=.4\linewidth]{NameCard}     \> \includegraphics[width=.4\linewidth]{NameCard}
 \end{tabbing}
-
-\bigskip
-
-{\centering {
-\includegraphics[width=0.4\linewidth,angle=0]{logo/Seal_Placeholder.png}
-}\par}
-
-
-\pagebreak
-
 
 
 \chapter*{Executive Summary}
